@@ -1,0 +1,484 @@
+/* ------------------------------------------------------- */
+/* ---------------------DEFAULT SETUP---------------------- */
+/* ----------------------------------------------------------- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    color: #5a5a5a;
+    background-color: white;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* ------------------------------------------------------- */
+/* ---------------------REUSABLE COMPONENT------------------ */
+/* ----------------------------------------------------------- */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto; 
+}
+
+.btn {
+    color: white;
+    background-color: orange;
+    width: 190px;
+    display: inline-block;
+    border-radius: 20px;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 5px;
+    padding: 15px 30px;
+    transition: background-color 0.5s;/*all .5s*/
+}
+
+.btn:hover, .btn:active {
+    background-color: #d35400;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h2 {
+    color: orange;
+    text-align: center;
+    font-size: 180%;
+    font-weight: 700;
+    margin-bottom: 60px;
+    margin-top: 40px;
+}
+
+section {
+    padding: 50px;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 150px;
+    background-color: rgba(255, 165, 0, 0.5);
+    margin: 0 auto; 
+    margin-top: 4px;
+}
+
+.p-long {
+    text-align: center;
+    color: #265077;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    width: 70%;
+    margin-left: 15%;    
+    line-height: 150%; 
+}
+
+h3 {
+    text-align: center;
+    background-color: #13538f;
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.small-icon {
+    color: #4272a0;
+    margin-right: 10px;
+    font-size: 140%;
+}
+
+
+/* ------------------------------------------------------- */
+/* ---------------------HEADER SECTION---------------------- */
+/* ----------------------------------------------------------- */
+header {    
+    background-image: linear-gradient(45deg, rgba(2,33,64,0.8) 55%, rgba(45,95,93,0.85)), url("../img/background4.jpeg");   
+    
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    
+    background-attachment: fixed;
+}
+
+.logo {
+    width: 350px;
+    float: left;
+    margin-top: -50px;
+    margin-left: 70px;
+    margin-bottom: -100px;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+    margin-right: 50px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.main-nav li a {
+    text-decoration: none;    
+    color: white;
+    font-size: 110%; 
+    font-weight: 700;
+    transition: border-bottom 0.2s;
+    padding: 3px 0;
+}
+
+
+.main-nav li a:hover, .main-nav li a:active {
+    border-bottom: 3px solid white;
+}
+
+.header-main-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%,-55%);
+    width: 1140px;
+}
+
+h1 {    
+    font-size: 300%;
+    font-weight: 400;    
+    word-spacing: 5px;
+    color: white;
+    line-height: 135%;
+    margin-bottom: 20px;
+}
+
+/* -------------------STICKY-NAVIGATION----------------- */
+.sticky {
+    background-color: rgba(2,33,64,0.9); 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    width: 100%;    
+    padding-bottom: 7px;
+}
+
+.sticky .logo {
+    width: 250px;
+    margin-top: -43px;
+    margin-bottom: -70px;
+}
+
+.sticky .main-nav {
+    margin-top: 28px;
+    font-size: 95%;
+}
+
+/* -------------------MOBILE-NAV-ICON----------------- */
+.mobile-nav-icon {
+    font-size: 200%;
+    color: #067ff1;
+    position: absolute;
+    top: 50px;
+    right: 70px;
+    display: none;
+}
+
+.sticky .mobile-nav-icon {
+    top: 27px;
+}
+
+/* ------------------------------------------------------- */
+/* ---------------------ABOUT SECTION---------------------- */
+/* ----------------------------------------------------------- */
+.about-picture img {    
+    width: 90%;
+    border-radius: 20px;
+    border: 2px solid #6eaae2;
+    box-shadow: 0px 5px 15px 3px #265077;
+    transition: all .5s;
+}
+
+.about-picture {
+    position: relative;
+    margin-top: 60px;
+}
+
+.picture-title {
+    color: aliceblue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, 100%);
+    opacity: 0; 
+    transition: all .5s;
+}
+
+.about-picture:hover .picture-title, 
+.about-picture:active .picture-title {    
+    transform: translate(-60%, -45%);
+    opacity: 1;
+}
+
+.about-picture:hover img, 
+.about-picture:active img {
+    filter: blur(1px) brightness(60%);
+}
+
+/* ------------------------------------------------------- */
+/* ---------------------PRODUCTS SECTION---------------------- */
+/* ----------------------------------------------------------- */
+.products-section {
+    background-color: #f4f4f4;
+}
+
+.products-box {
+    width:90%;
+    background-color: #eeefff;
+    height: 350px;
+    box-shadow: 5px 5px 5px #e0e0e0b0;
+    margin-left: 5%;
+}
+
+.products-price {
+    font-size: 250%;
+    text-align: center;
+    font-weight: 300;
+    color: #265077;
+}
+
+.products-price span {
+    font-size: 80%;
+}
+
+.products-box ul li {
+    list-style: none;
+    margin: 20px 0px 10px 20%;
+}
+
+.products-box .btn {
+    margin-left: 21%;
+    /* position: relative;
+    transform: translate(25%, 0%); */
+    margin-top: 15px;
+}
+
+/* ------------------------------------------------------- */
+/* ---------------------TESTIMONIALS SECTION---------------------- */
+/* ----------------------------------------------------------- */
+.testimonials-section {
+    background-image: linear-gradient(45deg, rgba(2,33,64,0.8) 55%, rgba(45,95,93,0.85)), url("../img/background2.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+blockquote {
+    color: white;
+    font-style: italic;
+    line-height: 150%;
+    width: 95%;
+    position: relative;
+}
+
+blockquote::before {
+    content: "\201C";
+    display: block;
+    font-size: 300%;
+    position: absolute;
+    top: -10px;
+    left: -5px;
+}
+
+cite {
+    display: block;
+    color: #4481bb;
+    margin-top: 25px;
+}
+
+cite img {
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #5f9edd;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* ------------------------------------------------------- */
+/* ---------------------SPONSORS SECTION---------------------- */
+/* ----------------------------------------------------------- */
+figure img {
+    width: 140px;
+    margin-bottom: 10px;
+    /* cursor: pointer; */
+    transition: all .4s;
+}
+
+.sponsors-showcase li {
+    list-style: none;
+    float: left;
+    width: 30%;
+    cursor: pointer;
+    text-align: center;
+}
+
+.sponsors-showcase {
+    margin-left: 8%;
+    margin-bottom: 20px;/*ổng thì chỉnh chỗ li á*/
+}
+
+figure img:hover, figure img:active {
+    transform: scale(1.3);
+}
+
+/* ------------------------------------------------------- */
+/* ---------------------CONTACT SECTION---------------------- */
+/* ----------------------------------------------------------- */
+
+.contact-section {
+    background-image: linear-gradient(45deg, rgba(2,33,64,0.8) 55%, rgba(45,95,93,0.85)),url("../img/background5.jpeg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.information {
+    list-style: none;
+    color: white;
+    word-spacing: 1px;
+    line-height: 300%;
+    font-size: 95%;
+    margin-top: 35px;
+}
+
+.information .small-icon {
+    transition: all .3s;
+}
+
+.information .small-icon:hover, .information .small-icon:active {
+    transform: scale(1.3);
+}
+
+.information li {
+    width: 700px;
+}
+
+.social-icon {
+    list-style: none;
+    color: white;
+    padding-top: 50px;
+}
+
+.social-icon li {
+    display: inline-block;
+    font-size: 250%;
+    margin-left: 30px;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.social-icon li:hover, .social-icon li:active {
+    transform: scale(1.3);
+    color: orange;
+}
+
+/* ----------------------CONTACT-FORM---------------------- */
+form {
+    background-color: rgba(2, 33, 0, 0.5);
+    margin-left: 30%;
+    width: 68%;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+form .row {
+    margin-bottom: 20px;
+}
+
+label {
+    color: white;
+    font-size: 150%;
+    font-weight: 350;
+}
+
+input, textarea {
+    outline: none;
+    padding: 10px;
+    background-color: rgba(148, 223, 146, 0.2);
+    border: 1px solid rgba(68, 95, 66, 0.4);
+    margin-left: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 70%;
+    color: white;
+}
+
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+input {
+    height: 50px;
+}
+
+form .row:last-child {    
+    text-align: center;     
+}
+
+input::placeholder {
+    font-family: 'Lato', sans-serif;
+}
+
+input[type=submit] {    
+    font-weight: 600;    
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    border-radius: 10px;
+    width: 60%;
+    margin-top: 15px;
+}
+
+input[type=text], input[type=email], textarea {    
+    width: 80%;
+    font-size: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all .3s;
+}
+
+input[type=text]:focus, input[type=email]:focus, textarea:focus,
+input[type=text]:hover, input[type=email]:hover, textarea:hover {    
+    background-color: rgba(45,95,93,0.85);
+}
+
+/* ------------------------------------------------------- */
+/* ---------------------FOOTER---------------------- */
+/* ----------------------------------------------------------- */
+footer {
+    background-color: #067ff1;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
