@@ -21,9 +21,9 @@ The website is written by pure Javascript (mostly for waypoints), HTML and CSS (
     
     │   ├── favicons : App's icon.
     
-    │   ├── img : Images used in the app.
+    │   ├── img : All images used in the app.
     
-    │   ├── js : Define website's action when user interacts using waypoints.    
+    │   ├── js : Defines website's action when user interacts using waypoints.    
   
     ├─ vendors
         
