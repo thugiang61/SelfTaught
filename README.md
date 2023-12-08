@@ -13,7 +13,7 @@ Main parts:
 The website is written by pure Javascript (mostly for waypoints), HTML and CSS (with pre-defined grid.css from third-party).
 
 ## Project structure
-  SelfTaught
+  self-taught
   
     ├─ resources
         
@@ -37,10 +37,10 @@ The website is written by pure Javascript (mostly for waypoints), HTML and CSS (
 
 ## Project render 
 1. Open your browser
-2. Go to `SelfTaught` folder directory 
+2. Go to `self-taught` folder directory 
 3. Click on `index.html` file 
 
 ## Local Development
-1. Using an IDE to open `SelfTaught` project directory
+1. Using an IDE to open `self-taught` project directory
 2. Install `LiveServer` extension
 3. Open `index.html`, right click and choose `Open with LiveServer` to start running and developing website
