@@ -42,5 +42,5 @@ The website is written by pure Javascript (mostly for waypoints), HTML and CSS (
 
 ## Local Development
 1. Using an IDE to open `self-taught` project directory
-2. Install `LiveServer` extension
+2. In the IDE, install `LiveServer` extension
 3. Open `index.html`, right click and choose `Open with LiveServer` to start running and developing website
